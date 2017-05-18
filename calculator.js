@@ -7,7 +7,7 @@
  */
 var calculatorModule = function(){
 
-  var memory;
+  var memory = 0;
   var total = 0;
   /**
    * sets the `total` to the number passed in
@@ -64,7 +64,9 @@ var calculatorModule = function(){
    * Return the value stored at `memory`
    * @return { Number }
    */
-
+  function recallMemory(){
+    return memory;
+  }
 
   /**
    * Stores the value of `total` to `memory`
@@ -84,6 +86,7 @@ var calculatorModule = function(){
     add: add,
     subtract: subtract,
     multiply: multiply,
-    divide: divide
+    divide: divide,
+    recallMemory: recallMemory
    };
 };
