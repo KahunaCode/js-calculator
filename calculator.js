@@ -68,5 +68,8 @@ var calculatorModule = function(){
   /**
    * Validation
    */
-   return {};
+   return {
+    load: load,
+    getTotal: getTotal
+   };
 };
