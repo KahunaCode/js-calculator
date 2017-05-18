@@ -8,13 +8,14 @@
 var calculatorModule = function(){
 
   var memory;
-  var total;
+  var total = 0;
   /**
    * sets the `total` to the number passed in
    * @param  { Number } x
    * @return { Number }    current total
    */
-  function load(total){
+  function load(num){
+    total = num;
     return total;
   }
 
@@ -22,7 +23,7 @@ var calculatorModule = function(){
    * Return the value of `total`
    * @return { Number }
    */
-  function getTotal(total){
+  function getTotal(){
     return total;
    }
 
