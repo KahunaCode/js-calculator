@@ -15,8 +15,14 @@ var calculatorModule = function(){
    * @return { Number }    current total
    */
   function load(num){
+    if(typeof num === "number"){
+
     total = num;
     return total;
+  }
+  else{
+    throw new Error("not a number");
+  }
   }
 
   /**
@@ -34,7 +40,6 @@ var calculatorModule = function(){
   function add(num){
     total += num;
   }
-
 
   /**
    * Subtracts the value passed in from `total`
@@ -71,15 +76,25 @@ var calculatorModule = function(){
   /**
    * Stores the value of `total` to `memory`
    */
-
+  function saveMemory(){
+    memory = total;
+    return memory;
+  }
 
   /**
    * Clear the value stored at `memory`
    */
-
+  function clearMemory(){
+    memory = 0;
+    return memory;
+  }
   /**
    * Validation
    */
+
+
+
+
    return {
     load: load,
     getTotal: getTotal,
@@ -87,6 +102,8 @@ var calculatorModule = function(){
     subtract: subtract,
     multiply: multiply,
     divide: divide,
-    recallMemory: recallMemory
+    recallMemory: recallMemory,
+    saveMemory: saveMemory,
+    clearMemory: clearMemory
    };
 };
