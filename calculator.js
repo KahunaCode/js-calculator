@@ -38,7 +38,13 @@ var calculatorModule = function(){
    * @param { Number } x
    */
   function add(num){
+    if(typeof num === "number"){
     total += num;
+  }else
+  {
+    throw new Error("not a number");
+  }
+
   }
 
   /**
@@ -46,15 +52,24 @@ var calculatorModule = function(){
    * @param  { Number } x
    */
   function subtract(num){
-    total -= num;
+    if(typeof num === "number"){
+      total -= num;
   }
+  else
+    {throw new Error("not a number");}
+}
 
   /**
    * Multiplies the value by `total`
    * @param  { Number } x
    */
   function multiply(num){
+    if(typeof num === "number"){
     total *= num;
+    }
+    else{
+      throw new Error("not a number");
+    }
   }
 
   /**
@@ -62,7 +77,12 @@ var calculatorModule = function(){
    * @param  { Number } x
    */
   function divide(num){
+    if(typeof num === "number"){
     total /= num;
+    }
+    else{
+      throw new Error("not a number")
+    }
   }
 
   /**
