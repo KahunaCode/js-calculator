@@ -5,20 +5,26 @@
  * @variable PRIVATE { Number } `total`
  * @return {object} `calculator` object that can be used
  */
-var calculatorModule = (function(){
+var calculatorModule = function(){
 
+  var memory;
+  var total;
   /**
    * sets the `total` to the number passed in
    * @param  { Number } x
    * @return { Number }    current total
    */
-
+  function load(total){
+    return total;
+  }
 
   /**
    * Return the value of `total`
    * @return { Number }
    */
-
+  function getTotal(total){
+    return total;
+   }
 
   /**
    * Sums the value passed in with `total`
@@ -62,5 +68,5 @@ var calculatorModule = (function(){
   /**
    * Validation
    */
-
-})();
+   return {};
+};
