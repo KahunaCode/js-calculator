@@ -48,13 +48,17 @@ var calculatorModule = function(){
    * Multiplies the value by `total`
    * @param  { Number } x
    */
-
+  function multiply(num){
+    total *= num;
+  }
 
   /**
    * Divides the value passing in by `total`
    * @param  { Number } x
    */
-
+  function divide(num){
+    total /= num;
+  }
 
   /**
    * Return the value stored at `memory`
@@ -78,6 +82,8 @@ var calculatorModule = function(){
     load: load,
     getTotal: getTotal,
     add: add,
-    subtract: subtract
+    subtract: subtract,
+    multiply: multiply,
+    divide: divide
    };
 };
